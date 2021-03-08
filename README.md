@@ -16,7 +16,7 @@ The result is that this project was copmleted using only open source, cross-plat
 Assuming you have .NET Core installed:
  * Clone (or download and unzip) this repository.
  * Run the following at the root directory from the command line:
-   * 'dotnet restore'
-   * 'dotnet build'
-   * 'dotnet run'
+   * `dotnet restore`
+   * `dotnet build`
+   * `dotnet run`
  * Direct your web browser to [https://localhost:5001](https://localhost:5001)
