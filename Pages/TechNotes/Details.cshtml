@@ -1,0 +1,49 @@
+@page "{id:int?}"
+@model RequestTracker.Pages.TechNotes.DetailsModel
+
+@{
+    ViewData["Title"] = "Note Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Note</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TechNote.ID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TechNote.ID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TechNote.ServiceRequestID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TechNote.ServiceRequest.ID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TechNote.TechnicianID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TechNote.Technician.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TechNote.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TechNote.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TechNote.Note)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TechNote.Note)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.TechNote.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

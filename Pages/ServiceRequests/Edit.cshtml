@@ -1,0 +1,58 @@
+@page "{id:int?}"
+@model RequestTracker.Pages.ServiceRequests.EditModel
+
+@{
+    ViewData["Title"] = "Edit Existing Service Request";
+}
+
+<h1>Edit</h1>
+
+<h4>Service Request</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ServiceRequest.ID" />
+            <div class="form-group">
+                <label asp-for="ServiceRequest.ClientID" class="control-label"></label>
+                <select asp-for="ServiceRequest.ClientID" class="form-control" asp-items="ViewBag.Client"></select>
+                <span asp-validation-for="ServiceRequest.ClientID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServiceRequest.Description" class="control-label"></label>
+                <textarea asp-for="ServiceRequest.Description" class="form-control"></textarea>
+                <span asp-validation-for="ServiceRequest.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServiceRequest.Status" class="control-label"></label>
+                <select asp-for="ServiceRequest.Status" class="form-control" asp-items="ViewBag.Status"></select>
+                @* <select asp-for="ServiceRequest.Status" class="form-control"
+                    asp-items="Html.GetEnumSelectList<RequestTracker.Models.Status>()"></select> *@
+                <span asp-validation-for="ServiceRequest.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServiceRequest.TechnicianID" class="control-label"></label>
+                <select asp-for="ServiceRequest.TechnicianID" class="form-control" asp-items="ViewBag.Technician">
+                </select>
+                <span asp-validation-for="ServiceRequest.TechnicianID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServiceRequest.CloseDate" class="control-label"></label>
+                <input asp-for="ServiceRequest.CloseDate" class="form-control" />
+                <span asp-validation-for="ServiceRequest.CloseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

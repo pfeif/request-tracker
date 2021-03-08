@@ -1,0 +1,73 @@
+@* The @page directive makes this page an MVC action, so it will handle requests without a
+    separate controller. *@
+@page
+@* @model sets the type of PageModel that will be used below. Here, it is IndexModel which is
+    derived from PageModel. *@
+@model RequestTracker.Pages.ServiceRequests.IndexModel
+
+@{
+    ViewData["Title"] = "Service Requests";
+}
+
+<h1>Service Request Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @* Here, DisplayNameFor returns the display name for the Title property. *@
+                @Html.DisplayNameFor(model => model.ServiceRequest[0].Client)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceRequest[0].OpenDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceRequest[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceRequest[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceRequest[0].Technician)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceRequest[0].CloseDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ServiceRequest) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Client.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpenDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Technician.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CloseDate)
+            </td>
+            <td>
+                @* asp-page and asp-route-id are Anchor Tag Helper attributes that generate and
+                    route links to the Edit, Details, and Delete pages. *@
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

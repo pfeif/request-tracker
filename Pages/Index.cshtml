@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome Professor Hamilton</h1>
+
+    <p>When I started this project, I had almost no idea in which direction I was going to take it. I considered using Java and writing a UI with JavaFX. I started playing with different ideas using Python and Flask. Then, I remembered something, and my path became much clearer. You might not recall, but when I took your ASP.NET course, I once mentioned the idea of using ASP.NET Core, Entity Framework Core, and Docker as a way to prevent development environment inconsistencies and resource-heavy virtual machines for the students, and we briefly talked about how using the latest version of most things Microsoft was asking for trouble.</p>
+
+    <p>Since ASP.NET Core 3.1 is a stable, LTS version, and .NET 5.0 is now being developed, I decided to complete this project as a web app using all cross-platform tools - C#, ASP.NET Core, Entity Framework Core, Razor Pages, and SQLite - and to top it off, I wrote it using Microsoft's light-weight, open source code editor, <a href="https://code.visualstudio.com/">Visual Studio Code</a>. I don't have Docker worked out yet, but that's mostly due to poor time-management and my recently becoming a full-time school teacher to my 6-, 7-, 9-, and 11-year-olds.</p>
+
+    <p>You'll find that the layout of this project is pretty expected. There is a /Models folder which contains the Client, Technician, TechNote, and ServiceRequest models along with a SeedData class to get the database started with sample data. For each of the models, there is a matching subfolder in the /Pages folder containing five Razor Page files and five PageModel files for the CRUD functions provided by Entity Framework Core. Because the Razor Pages operate as their own controllers, you won't find separate View and Controller folders.</p>
+
+    <p>Even though the code and structure are well-ordered, there are a large number of files generated for this type of project. Therefore, I tried to condense my code comments around the most complicated model - ServiceRequest. Most of the comments made there apply throughout the rest of the project, but copying/pasting comment after comment seemed tedious and excessive. Almost every Data Annotation clarification, reference URL, and Razor code explanation will be found in the ServiceRequst.cs file or in one of the files in the /Pages/ServiceRequests folder unless it is specific to some action or item belonging to another model.</p>
+
+    <p>I could keep going, and there are a lot more features that I'd like to implement in this project, but I'll digress here. I hope it meets your approval.</p>
+</div>
