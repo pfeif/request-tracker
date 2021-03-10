@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\James\\Programming\\C#\\RequestTrackerVSC\\RequestTracker\\RequestTracker.csproj": {}
+    "C:\\Users\\James\\Programming\\C#\\RequestTracker\\RequestTracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\James\\Programming\\C#\\RequestTrackerVSC\\RequestTracker\\RequestTracker.csproj": {
+    "C:\\Users\\James\\Programming\\C#\\RequestTracker\\RequestTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\James\\Programming\\C#\\RequestTrackerVSC\\RequestTracker\\RequestTracker.csproj",
+        "projectUniqueName": "C:\\Users\\James\\Programming\\C#\\RequestTracker\\RequestTracker.csproj",
         "projectName": "RequestTracker",
-        "projectPath": "C:\\Users\\James\\Programming\\C#\\RequestTrackerVSC\\RequestTracker\\RequestTracker.csproj",
+        "projectPath": "C:\\Users\\James\\Programming\\C#\\RequestTracker\\RequestTracker.csproj",
         "packagesPath": "C:\\Users\\James\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\James\\Programming\\C#\\RequestTrackerVSC\\RequestTracker\\obj\\",
+        "outputPath": "C:\\Users\\James\\Programming\\C#\\RequestTracker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -29,6 +29,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,6 +41,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -78,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
