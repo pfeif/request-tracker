@@ -13,10 +13,13 @@ The professor I completed this project for was also my ASP.NET professor. For th
 The result is that this project was copmleted using only open source, cross-platform tools to make a point. I created it using C#, ASP.NET Core, Entity Framework Core, Razor Pages, and SQLite.
 
 ## How to run the code
-Assuming you have .NET Core installed:
+Assuming you have .NET Core 3.1+ installed:
  * Clone (or download and unzip) this repository.
- * Run the following at the root directory from the command line:
+ * Choose to use either the dotnet cli tool or Visual Studio
+ * CLI - Run the following at the root directory from the command line:
    * `dotnet restore`
    * `dotnet build`
    * `dotnet run`
+ * Visual Studio - Simply open [RequestTracker.sln](RequestTracker.sln)
+   * launch application using the IIS Express option in your toolbar
  * Direct your web browser to [https://localhost:5001](https://localhost:5001)
